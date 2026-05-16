@@ -3,128 +3,405 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>TapThrough — the fastest way to complete tasks on iPhone</title>
-<meta name="description" content="Visual, step-by-step walkthroughs that show you exactly which buttons to tap on iPhone. No outdated YouTube videos. No tracking, ever.">
-<meta property="og:title" content="TapThrough">
-<meta property="og:description" content="Visual, step-by-step walkthroughs that show you exactly which buttons to tap on iPhone.">
+<title>TapThrough — fix what your iPhone apps are doing in 20 seconds</title>
+<meta name="description" content="Your apps are doing things you didn't agree to. TapThrough shows you exactly which buttons to tap to take back control of your privacy, settings, and data. iPhone only. Zero tracking, ever.">
+<meta property="og:title" content="TapThrough — your apps are doing things you didn't agree to.">
+<meta property="og:description" content="Visual walkthroughs for iPhone privacy, parental controls, and the settings Apple hides four menus deep.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://tapthrough.app/">
+<meta name="theme-color" content="#13073A" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#000000" media="(prefers-color-scheme: dark)">
+<link rel="icon" type="image/png" href="/img/icon.png">
+<link rel="apple-touch-icon" href="/img/icon.png">
 <link rel="canonical" href="https://tapthrough.app/">
 <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-<main>
 
-  <header class="hero">
-    <h1>TapThrough</h1>
-    <p class="tagline">The fastest way to complete tasks on iPhone.</p>
-    <p class="lede">
-      Visual, step-by-step walkthroughs that show you exactly which buttons to tap &mdash;
-      so you can stop hunting through Settings menus and outdated YouTube videos.
-    </p>
-    <p><span class="badge">Coming soon to the App Store</span></p>
-  </header>
+<a class="skip" href="#main">Skip to content</a>
 
-  <section>
-    <h2>Why TapThrough exists</h2>
-    <p>You shouldn't need twenty minutes to figure out how to back up your photos,
-      disable Gmail notifications, or set up Screen Time for your kid's iPhone. But Apple
-      changes iOS every year. Apps redesign their menus every few months. The blog post
-      that ranks first on Google was written for iOS 16 and the screenshots no longer match.</p>
-    <p>So you scroll, you guess, you give up &mdash; or you call your nephew.</p>
-    <p>TapThrough fixes that. Every walkthrough is captured on a real iPhone running
-      the current iOS, recaptured within days of each Apple release, and shows you the
-      exact button to tap on the exact screen you're looking at.</p>
+<header class="nav">
+  <a href="/" class="nav-wordmark" aria-label="TapThrough home">
+    <img src="/img/icon.png" alt="" class="nav-icon" width="28" height="28">
+    <span>TapThrough</span>
+  </a>
+  <nav class="nav-links" aria-label="Primary">
+    <a href="#packs">Packs</a>
+    <a href="#pricing">Pricing</a>
+    <a href="#privacy-block">Privacy</a>
+  </nav>
+</header>
+
+<main id="main">
+
+  <!-- ─────────────────────────────────────────────────────────────────
+       HERO — DARK
+       ───────────────────────────────────────────────────────────────── -->
+  <section class="hero">
+    <div class="hero-aurora" aria-hidden="true"></div>
+
+    <div class="hero-inner">
+      <img src="/img/icon.png" alt="TapThrough" class="hero-icon" width="140" height="140">
+
+      <p class="eyebrow eyebrow-light"><span class="dot" aria-hidden="true"></span>Coming soon to the App Store</p>
+
+      <h1 class="display">
+        <span class="reveal-line">Your apps are doing</span>
+        <span class="reveal-line">things you didn't</span>
+        <span class="reveal-line">agree to.</span>
+      </h1>
+
+      <p class="sub-display">
+        Fix them in&nbsp;<span class="circled" aria-label="twenty seconds">20 seconds<svg class="circle-svg" viewBox="0 0 240 70" preserveAspectRatio="none" aria-hidden="true"><path d="M 14 36 C 18 12, 60 6, 122 7 C 188 9, 230 19, 228 38 C 226 56, 178 65, 110 64 C 50 63, 10 56, 14 36 Z" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"/></svg></span>.
+        Watch.
+      </p>
+
+      <p class="lede">
+        TapThrough is an iPhone app that shows you exactly which buttons to tap,
+        in order, to take back control of your privacy, settings, and data.
+      </p>
+
+      <div class="ticker" aria-live="polite">
+        <span class="ticker-label">Right now</span>
+        <span class="ticker-track">
+          <span class="ticker-item">Strangers can see your Venmo payments.</span>
+          <span class="ticker-item">Snapchat is broadcasting your location.</span>
+          <span class="ticker-item">Google has every place you've been since 2014.</span>
+          <span class="ticker-item">Instagram tells your ex when you're online.</span>
+          <span class="ticker-item">TikTok knows every site you visit, in any browser.</span>
+        </span>
+      </div>
+    </div>
   </section>
 
-  <section>
-    <h2>How it works</h2>
-    <ol class="steps">
-      <li><strong>Pick a task.</strong> &ldquo;Turn off notifications,&rdquo;
-        &ldquo;Delete history in Google Maps,&rdquo; &ldquo;Set up Apple Pay.&rdquo;</li>
-      <li><strong>Swipe through it on your phone.</strong> One step per screen,
-        with a red circle around the exact button to tap.</li>
-      <li><strong>Done.</strong> Most tasks take under a minute.</li>
+
+  <!-- ─────────────────────────────────────────────────────────────────
+       DEMO — Phone mockup showing actual product
+       ───────────────────────────────────────────────────────────────── -->
+  <section class="demo">
+    <div class="demo-grid">
+      <div class="demo-copy">
+        <p class="section-eyebrow">Here's what it looks like</p>
+        <h2 class="section-title">A red circle. Around the exact button to tap.</h2>
+        <p class="demo-body">
+          Every walkthrough is a sequence of real iPhone screenshots, captured
+          on the current iOS, with one annotation per step: a single red circle
+          drawn around the button you tap next. No videos to scrub. No paragraphs
+          to skim. No guessing whether your iPhone looks like the one in the blog post.
+        </p>
+        <ul class="demo-bullets">
+          <li><strong>Captured on iPhone 15 Pro Max</strong>, iOS 26.5 — the current public release.</li>
+          <li><strong>Recaptured within days</strong> of every Apple update.</li>
+          <li><strong>Works offline.</strong> Walkthroughs ship with the app.</li>
+        </ul>
+      </div>
+
+      <figure class="phone" aria-label="A walkthrough step in the TapThrough app">
+        <div class="phone-frame">
+          <div class="phone-notch" aria-hidden="true"></div>
+          <div class="phone-screen">
+            <img src="/img/walkthrough-notifications.png" alt="iOS Settings screen for Calendar notifications" class="phone-shot">
+            <!-- Live annotation overlay, drawn by CSS / SVG just like the app draws it at runtime -->
+            <svg class="phone-annotation" viewBox="0 0 240 70" preserveAspectRatio="none" aria-hidden="true">
+              <path d="M 14 36 C 18 12, 60 6, 122 7 C 188 9, 230 19, 228 38 C 226 56, 178 65, 110 64 C 50 63, 10 56, 14 36 Z"
+                    fill="none" stroke="currentColor" stroke-width="4" stroke-linecap="round" />
+            </svg>
+            <div class="phone-step-meta">
+              <span class="phone-step-num">Step 5 of 5</span>
+              <span class="phone-step-title">Turn off Allow Notifications</span>
+            </div>
+          </div>
+        </div>
+        <figcaption class="phone-caption">Actual app screen · turn-off-notifications walkthrough</figcaption>
+      </figure>
+    </div>
+  </section>
+
+
+  <!-- ─────────────────────────────────────────────────────────────────
+       THREATS — light, alternating
+       ───────────────────────────────────────────────────────────────── -->
+  <section class="threats-section">
+    <header class="section-head">
+      <p class="section-eyebrow">The launch pack</p>
+      <h2 class="section-title">Five things your iPhone apps are doing right now.</h2>
+      <p class="section-sub">Five more in the Privacy pack. Plus four other packs covering family safety,
+        time-savers, battery, and accessibility.</p>
+    </header>
+
+    <ol class="threats">
+      <li class="threat">
+        <span class="threat-num">01</span>
+        <div class="threat-body">
+          <h3>Venmo shows your payments to strangers.</h3>
+          <p>By default, every payment you send is on a public feed. We show you the three taps to make every transaction private &mdash; past, present, and future.</p>
+          <p class="threat-meta"><span class="app-tag">Venmo</span><span class="dur">~20s</span></p>
+        </div>
+      </li>
+      <li class="threat">
+        <span class="threat-num">02</span>
+        <div class="threat-body">
+          <h3>Snapchat is broadcasting your live location.</h3>
+          <p>Snap Map is on for new accounts by default. Turn on Ghost Mode in four taps and reclaim the right to disappear.</p>
+          <p class="threat-meta"><span class="app-tag">Snapchat</span><span class="dur">~25s</span></p>
+        </div>
+      </li>
+      <li class="threat">
+        <span class="threat-num">03</span>
+        <div class="threat-body">
+          <h3>Google has every place you've been since 2014.</h3>
+          <p>Location History was on by default for years. Delete the whole archive in one tap and stop new logging in three more.</p>
+          <p class="threat-meta"><span class="app-tag">Google Maps</span><span class="dur">~30s</span></p>
+        </div>
+      </li>
+      <li class="threat">
+        <span class="threat-num">04</span>
+        <div class="threat-body">
+          <h3>Instagram tells your ex when you're online.</h3>
+          <p>Activity Status broadcasts the green dot next to your name to anyone you've messaged. Turn it off and disappear politely.</p>
+          <p class="threat-meta"><span class="app-tag">Instagram</span><span class="dur">~15s</span></p>
+        </div>
+      </li>
+      <li class="threat">
+        <span class="threat-num">05</span>
+        <div class="threat-body">
+          <h3>ChatGPT is training on your conversations.</h3>
+          <p>The default setting on a new ChatGPT account allows OpenAI to use your chats to train future models. The opt-out is one switch deep, in a menu most people never find.</p>
+          <p class="threat-meta"><span class="app-tag">ChatGPT</span><span class="dur">~20s</span></p>
+        </div>
+      </li>
     </ol>
   </section>
 
-  <section>
-    <h2>What's in the app</h2>
-    <ul class="features">
-      <li><strong>100+ walkthroughs at launch</strong>, covering iPhone Settings,
-        iCloud, Photos, Mail, and the most-used third-party apps.</li>
-      <li><strong>Captured on the current iOS</strong>, with a hard rule against
-        publishing any walkthrough on an obsolete version.</li>
-      <li><strong>Recaptured within days</strong> of every Apple release, so the
-        screenshots never go stale.</li>
-      <li><strong>Topic packs</strong> for the high-leverage stuff: protect your
-        privacy, set up a kid's first iPhone, fix battery drain.</li>
-      <li><strong>Works offline.</strong> Walkthroughs ship with the app; you don't
-        need a connection to read them.</li>
-    </ul>
+
+  <!-- ─────────────────────────────────────────────────────────────────
+       HOW IT WORKS
+       ───────────────────────────────────────────────────────────────── -->
+  <section class="how">
+    <header class="section-head section-head-center">
+      <p class="section-eyebrow">How it works</p>
+      <h2 class="section-title">Three taps. Maybe four.</h2>
+    </header>
+
+    <div class="how-grid">
+      <article class="how-step">
+        <span class="how-num" aria-hidden="true">1</span>
+        <h3>Pick a task.</h3>
+        <p>Search or browse: &ldquo;Make Venmo private.&rdquo; &ldquo;Block adult content for my kid.&rdquo; &ldquo;Unsend a Gmail.&rdquo;</p>
+      </article>
+      <article class="how-step">
+        <span class="how-num" aria-hidden="true">2</span>
+        <h3>Swipe through it on your phone.</h3>
+        <p>One step per screen. A red circle around the exact button to tap. No 12-minute YouTube video.</p>
+      </article>
+      <article class="how-step">
+        <span class="how-num" aria-hidden="true">3</span>
+        <h3>Done.</h3>
+        <p>Most tasks take under a minute. The harder ones take two. That's the whole product.</p>
+      </article>
+    </div>
   </section>
 
-  <section class="privacy-callout">
-    <h2>We don't collect data about you. Ever.</h2>
-    <p>TapThrough ships with <strong>zero analytics SDKs</strong>. No Google Analytics.
-      No Firebase. No Mixpanel. No crash reporting service. No advertising IDs.</p>
-    <p>We don't know what walkthroughs you read, what time you opened the app, or
-      what device you're on. We can't &mdash; we didn't build the wiring. The only
-      personal data Apple shares with us is whether your in-app purchase succeeded,
-      which Apple needs to do so we can unlock the content you paid for.</p>
-    <p><a href="/privacy">Read the full privacy policy &rarr;</a></p>
+
+  <!-- ─────────────────────────────────────────────────────────────────
+       PACKS — colored cards per pack
+       ───────────────────────────────────────────────────────────────── -->
+  <section class="packs-section" id="packs">
+    <header class="section-head">
+      <p class="section-eyebrow">The catalog</p>
+      <h2 class="section-title">Five packs. One launch.</h2>
+      <p class="section-sub">Buy any pack à la carte for $6.99, or get everything with Pro.</p>
+    </header>
+
+    <div class="pack-grid">
+
+      <article class="pack pack-privacy">
+        <div class="pack-aurora" aria-hidden="true"></div>
+        <p class="pack-tag">Launch headliner</p>
+        <h3 class="pack-name">Lock Down Your Privacy</h3>
+        <p class="pack-count">10 walkthroughs</p>
+        <p class="pack-apps">Venmo · WhatsApp · Snapchat · Instagram · TikTok · Cash App · ChatGPT · Google Maps</p>
+        <p class="pack-price"><span class="pack-price-num">$6.99</span><span>one-time</span></p>
+      </article>
+
+      <article class="pack pack-family">
+        <div class="pack-aurora" aria-hidden="true"></div>
+        <p class="pack-tag">Pack</p>
+        <h3 class="pack-name">Family Safety</h3>
+        <p class="pack-count">8 walkthroughs</p>
+        <p class="pack-apps">Screen Time setup, adult-content block, Ask to Buy, TikTok Family Pairing, Netflix kid profile, Snapchat Quick Add off, Instagram DM restrictions, block YouTube channels.</p>
+        <p class="pack-price"><span class="pack-price-num">$6.99</span><span>one-time</span></p>
+      </article>
+
+      <article class="pack pack-savers">
+        <div class="pack-aurora" aria-hidden="true"></div>
+        <p class="pack-tag">Pack</p>
+        <h3 class="pack-name">Time &amp; Money Savers</h3>
+        <p class="pack-count">8 walkthroughs</p>
+        <p class="pack-apps">Unsend Gmail, schedule send, mass-delete promos, free 20GB in Google Photos, cancel Prime, find every Apple subscription, archive Amazon orders, kill YouTube Shorts.</p>
+        <p class="pack-price"><span class="pack-price-num">$6.99</span><span>one-time</span></p>
+      </article>
+
+      <article class="pack pack-battery">
+        <div class="pack-aurora" aria-hidden="true"></div>
+        <p class="pack-tag">Pack</p>
+        <h3 class="pack-name">Battery &amp; Storage</h3>
+        <p class="pack-count">7 walkthroughs</p>
+        <p class="pack-apps">Battery Health, Low Power Mode, per-app battery use, storage review, offload unused apps, iCloud photo optimization, Safari cache.</p>
+        <p class="pack-price"><span class="pack-price-num">$6.99</span><span>one-time</span></p>
+      </article>
+
+      <article class="pack pack-display">
+        <div class="pack-aurora" aria-hidden="true"></div>
+        <p class="pack-tag">Pack</p>
+        <h3 class="pack-name">Display &amp; Accessibility</h3>
+        <p class="pack-count">6 walkthroughs</p>
+        <p class="pack-apps">Bold Text, Reduce Motion, Dynamic Type, Live Captions, Larger Cursor, plus the existing accessibility set.</p>
+        <p class="pack-price"><span class="pack-price-num">$6.99</span><span>one-time</span></p>
+      </article>
+
+      <article class="pack pack-pro">
+        <div class="pack-aurora" aria-hidden="true"></div>
+        <p class="pack-tag pack-tag-pro">Pro only</p>
+        <h3 class="pack-name">Cross-App Workflows &amp; Hidden Features</h3>
+        <p class="pack-count">10 walkthroughs</p>
+        <p class="pack-apps">Gmail PDF to Drive, iCloud photo album to WhatsApp, Focus mode for work, lock WhatsApp chats with Face ID, mute Instagram without unfollowing, and more.</p>
+        <p class="pack-price"><span class="pack-price-num">Pro</span><span>subscription only</span></p>
+      </article>
+
+    </div>
   </section>
 
-  <section>
-    <h2>Pricing</h2>
-    <table class="pricing">
-      <thead>
-        <tr>
-          <th>Plan</th>
-          <th>Price</th>
-          <th>What you get</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td><strong>Pro Monthly</strong></td>
-          <td>$4.99 / month<br><span class="fineprint">7-day free trial</span></td>
-          <td>Everything in the app, every walkthrough, every pack, every iOS update.</td>
-        </tr>
-        <tr>
-          <td><strong>Pro Annual</strong></td>
-          <td>$39.99 / year<br><span class="fineprint">~$3.33/mo equivalent</span></td>
-          <td>Same as Pro Monthly. Best price.</td>
-        </tr>
-        <tr>
-          <td><strong>Topic Pack</strong></td>
-          <td>$6.99<br><span class="fineprint">one-time, lifetime</span></td>
-          <td>Buy just the walkthroughs in one pack: Privacy, Kids' iPhone, or Battery.</td>
-        </tr>
-      </tbody>
-    </table>
-    <p class="fineprint">
-      Subscriptions automatically renew through your Apple ID unless cancelled at least
-      24 hours before the end of the current period. Manage or cancel anytime in
+
+  <!-- ─────────────────────────────────────────────────────────────────
+       PRIVACY BLOCK — DARK VIOLET (bookends the hero)
+       ───────────────────────────────────────────────────────────────── -->
+  <section class="privacy-block" id="privacy-block">
+    <div class="privacy-aurora" aria-hidden="true"></div>
+    <div class="privacy-inner">
+      <p class="section-eyebrow eyebrow-light">About&nbsp;<span class="circled circled-inline" aria-label="us tracking you">us tracking you<svg class="circle-svg" viewBox="0 0 240 70" preserveAspectRatio="none" aria-hidden="true"><path d="M 14 36 C 18 12, 60 6, 122 7 C 188 9, 230 19, 228 38 C 226 56, 178 65, 110 64 C 50 63, 10 56, 14 36 Z" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"/></svg></span></p>
+
+      <h2 class="privacy-headline">We don't.</h2>
+
+      <p class="privacy-body">
+        It would be hard to sell a privacy app that quietly phones home with your reading
+        habits, so we don't. TapThrough ships with <strong>zero analytics SDKs</strong> &mdash;
+        no Google Analytics, no Firebase, no Mixpanel, no Sentry, no crash reporters,
+        no advertising IDs. We have no server you talk to. We can't tell which walkthrough
+        is most popular. We didn't build the wiring.
+      </p>
+
+      <p class="privacy-cta"><a href="/privacy" class="link-pill">Read the full privacy policy</a></p>
+    </div>
+  </section>
+
+
+  <!-- ─────────────────────────────────────────────────────────────────
+       PRICING
+       ───────────────────────────────────────────────────────────────── -->
+  <section class="pricing-section" id="pricing">
+    <header class="section-head">
+      <p class="section-eyebrow">Pricing</p>
+      <h2 class="section-title">Pay once for a pack. Or get everything.</h2>
+    </header>
+
+    <div class="price-grid">
+
+      <article class="price-card">
+        <p class="price-name">Topic Pack</p>
+        <p class="price-amount">$6.99<span class="price-period">&nbsp;one-time</span></p>
+        <ul class="price-includes">
+          <li>One pack of your choice</li>
+          <li>Lifetime access</li>
+          <li>Family Sharing on</li>
+          <li>Every future iOS update for that pack</li>
+        </ul>
+        <p class="price-fine">À la carte. Privacy, Family Safety, Time &amp; Money, Battery, or Display &amp; Accessibility.</p>
+      </article>
+
+      <article class="price-card price-card-feature">
+        <div class="price-card-aurora" aria-hidden="true"></div>
+        <p class="price-tag">Best value</p>
+        <p class="price-name">Pro Annual</p>
+        <p class="price-amount">$49.99<span class="price-period">&nbsp;/ year</span></p>
+        <p class="price-equiv">~$4.17/mo equivalent &middot; Save ~17%</p>
+        <ul class="price-includes">
+          <li>Every walkthrough</li>
+          <li>Every pack &mdash; current and future</li>
+          <li>Pro-only cross-app workflows</li>
+          <li>Recaptured within days of every iOS release</li>
+        </ul>
+      </article>
+
+      <article class="price-card">
+        <p class="price-name">Pro Monthly</p>
+        <p class="price-amount">$4.99<span class="price-period">&nbsp;/ month</span></p>
+        <p class="price-equiv">7-day free trial</p>
+        <ul class="price-includes">
+          <li>Same access as Pro Annual</li>
+          <li>Cancel anytime, in two taps</li>
+          <li>No charge during trial</li>
+        </ul>
+      </article>
+
+    </div>
+
+    <p class="pricing-disclosure">
+      Subscriptions automatically renew through your Apple ID unless cancelled at
+      least 24 hours before the end of the current period. Manage or cancel in
       Settings &rarr; Apple ID &rarr; Subscriptions. Full terms in our
       <a href="/terms">Terms of Service</a>.
     </p>
   </section>
 
-  <section>
-    <h2>Questions?</h2>
-    <p>Email <a href="mailto:support@tapthrough.app">support@tapthrough.app</a>.
-      A real human reads every message, usually within one business day.</p>
+
+  <!-- ─────────────────────────────────────────────────────────────────
+       SUPPORT
+       ───────────────────────────────────────────────────────────────── -->
+  <section class="support">
+    <p class="section-eyebrow">Questions</p>
+    <h2 class="support-headline">A human reads every email.</h2>
+    <p class="support-line">
+      <a href="mailto:support@tapthrough.app" class="email-link">support@tapthrough.app</a>
+    </p>
+    <p class="support-meta">Usually answered within one business day.</p>
   </section>
 
-  <footer>
-    <p><a href="/privacy">Privacy</a> &nbsp;&middot;&nbsp; <a href="/terms">Terms</a></p>
-    <p class="fineprint">&copy; 2026 Jedrock LLC. TapThrough is a product of Jedrock LLC,
-      not affiliated with or endorsed by Apple Inc. or any third-party app shown
-      in our walkthroughs. iPhone, iOS, App Store, and all related marks are
-      trademarks of Apple Inc.</p>
+
+  <!-- ─────────────────────────────────────────────────────────────────
+       FOOTER — DARK
+       ───────────────────────────────────────────────────────────────── -->
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <img src="/img/icon.png" alt="" class="footer-icon" width="56" height="56">
+        <p class="footer-wordmark">TapThrough</p>
+      </div>
+
+      <div class="footer-cols">
+        <div>
+          <p class="footer-label">Legal</p>
+          <p><a href="/privacy">Privacy Policy</a></p>
+          <p><a href="/terms">Terms of Service</a></p>
+        </div>
+        <div>
+          <p class="footer-label">Contact</p>
+          <p><a href="mailto:support@tapthrough.app">support@tapthrough.app</a></p>
+          <p class="footer-address">Jedrock LLC<br>5751 Cabot Drive<br>Oakland, CA 94611</p>
+        </div>
+      </div>
+
+      <p class="footer-fine">
+        &copy; 2026 Jedrock LLC. TapThrough is a product of Jedrock LLC, not
+        affiliated with or endorsed by Apple Inc. or any third-party app shown
+        in our walkthroughs. iPhone, iOS, App Store, and all related marks are
+        trademarks of Apple Inc., registered in the U.S. and other countries.
+      </p>
+    </div>
   </footer>
 
 </main>
+
 </body>
 </html>
