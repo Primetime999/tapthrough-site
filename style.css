@@ -206,6 +206,17 @@ strong { font-weight: 600; color: inherit; }
   flex-shrink: 0;
 }
 
+.eyebrow-link {
+  color: inherit;
+  border-bottom: 1px solid transparent;
+  padding-bottom: 1px;
+  transition: color .15s ease, border-color .15s ease;
+}
+.eyebrow-link:hover {
+  color: var(--b-white);
+  border-bottom-color: var(--b-white-55);
+}
+
 @keyframes pulse {
   0%, 100% { box-shadow: 0 0 0 4px var(--a-red-soft), 0 0 14px var(--a-red); }
   50%      { box-shadow: 0 0 0 9px transparent, 0 0 22px var(--a-red); }
@@ -497,20 +508,23 @@ strong { font-weight: 600; color: inherit; }
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 18px;
+  gap: 36px;            /* clear of the phone's drop-shadow so the caption reads */
+  position: relative;
+  z-index: 1;
 }
 
 .phone-frame {
   position: relative;
   width: 100%;
-  max-width: 340px;
-  aspect-ratio: 1290 / 2796;
+  max-width: 320px;
+  /* No aspect-ratio here — the inner .phone-screen sets the ratio so the
+     image fills it exactly, frame auto-sizes around it (no dead space). */
   background: #0A0A0A;
   border-radius: 44px;
   padding: 10px;
   box-shadow:
-    0 60px 120px -30px rgba(19, 7, 58, 0.40),
-    0 20px 40px -20px rgba(0, 0, 0, 0.30),
+    0 40px 80px -30px rgba(19, 7, 58, 0.35),
+    0 14px 28px -14px rgba(0, 0, 0, 0.25),
     inset 0 0 0 1px rgba(255, 255, 255, 0.10);
   transform: rotate(-1.5deg);
   transition: transform .4s cubic-bezier(.2, .8, .2, 1);
@@ -521,7 +535,7 @@ strong { font-weight: 600; color: inherit; }
 }
 
 @media (min-width: 880px) {
-  .phone-frame { transform: rotate(2.5deg); }
+  .phone-frame { transform: rotate(2deg); }
   .phone-frame:hover { transform: rotate(0deg) translateY(-4px); }
 }
 
@@ -540,7 +554,7 @@ strong { font-weight: 600; color: inherit; }
 .phone-screen {
   position: relative;
   width: 100%;
-  height: 100%;
+  aspect-ratio: 1290 / 2619;   /* exact cropped-screenshot ratio so the image fills with zero dead space */
   background: #F2F2F7;
   border-radius: 34px;
   overflow: hidden;
@@ -553,55 +567,36 @@ strong { font-weight: 600; color: inherit; }
   border-radius: 34px;
 }
 
-/* The red annotation circle — positioned over the "Allow Notifications" toggle.
-   The screenshot is 1290×2619 (cropped); the toggle row sits at approximately
-   y=180px from the top of that 2619px-tall image (~7% from top). */
+/* The red annotation — circles the Settings app icon (last row of the iOS 26
+   app grid, rightmost column, just above the dock). Sized just generously enough
+   to read as "a marker drawn over the icon," not so tight it's a halo. */
 .phone-annotation {
   position: absolute;
-  top: 6.2%;
-  left: 60%;
-  width: 32%;
-  height: 6%;
+  top: 64%;
+  left: 76%;
+  width: 17%;
+  height: 8%;
   pointer-events: none;
   color: var(--a-red);
   overflow: visible;
-  filter: drop-shadow(0 2px 8px rgba(255, 59, 48, 0.40));
+  filter: drop-shadow(0 2px 14px rgba(255, 59, 48, 0.60));
+  animation: phone-anno-pulse 2.4s ease-in-out 2.4s infinite;
+  transform-origin: center;
 }
 
-.phone-annotation path {
-  stroke-dasharray: 800;
-  stroke-dashoffset: 800;
-  animation: draw-circle 1.0s cubic-bezier(.4, .1, .25, 1) 1.6s forwards infinite;
-  animation-iteration-count: 1;
+.phone-annotation ellipse {
+  stroke-dasharray: 320;
+  stroke-dashoffset: 320;
+  animation: phone-anno-draw 1.1s cubic-bezier(.4, .1, .25, 1) 1.2s forwards;
 }
 
-.phone-step-meta {
-  position: absolute;
-  bottom: 24px;
-  left: 16px;
-  right: 16px;
-  background: rgba(10, 10, 10, 0.92);
-  -webkit-backdrop-filter: blur(20px);
-          backdrop-filter: blur(20px);
-  color: var(--b-white);
-  padding: 14px 18px;
-  border-radius: 16px;
-  display: flex;
-  flex-direction: column;
-  gap: 2px;
+@keyframes phone-anno-draw {
+  to { stroke-dashoffset: 0; }
 }
 
-.phone-step-num {
-  font-family: var(--f-mono);
-  font-size: 11px;
-  text-transform: uppercase;
-  letter-spacing: 0.14em;
-  color: var(--b-white-35);
-}
-
-.phone-step-title {
-  font-size: 14px;
-  font-weight: 600;
+@keyframes phone-anno-pulse {
+  0%, 100% { transform: scale(1);    opacity: 1;    }
+  50%      { transform: scale(1.10); opacity: 0.75; }
 }
 
 .phone-caption {

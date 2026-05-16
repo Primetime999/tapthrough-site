@@ -21,7 +21,7 @@ _Last updated: 2026-05-15. Owner: Jeffrey Davis (Jedrock LLC)._
 | Operator | **Jedrock LLC** (California limited liability company) |
 | Domain | `tapthrough.app` |
 | Support email | `support@tapthrough.app` |
-| Mailing address | 5751 Cabot Drive, Oakland, CA 94611, USA |
+| Public physical address | **None.** Site, policy, and terms identify the operator as "Jedrock LLC, a California limited liability company" without a street address. If a future surface (App Store Connect, legal demand) requires a real address, use the registered-agent address on file with the California Secretary of State — not a personal home address. |
 | Bundle ID | `org.jedrock.tapthrough` |
 | App icon | A white glowing index-finger-tap silhouette against a deep violet gradient with a teal target dot. Master: `TapThrough/Assets.xcassets/AppIcon.appiconset/AppIcon-1024.png`. Web mirror: `tapthrough-site/img/icon.png`. |
 | Brand dark gradient | `#0D0D1A → #1A1033 → #0F2044` (the canonical hero gradient — used in app HomeView, app PaywallView, web hero, web footer) |
