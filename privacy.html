@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Privacy Policy &mdash; TapThrough</title>
-<meta name="description" content="TapThrough's privacy policy. Short version: we don't collect, store, share, or sell any data about you.">
+<meta name="description" content="TapThrough's privacy policy. Short version: you're not the product. We use minimal, anonymous, aggregate analytics. We never sell your data, share it with advertisers, or integrate ad-tech SDKs.">
 <link rel="canonical" href="https://tapthrough.app/privacy">
 <meta name="theme-color" content="#FFFFFF" media="(prefers-color-scheme: light)">
 <meta name="theme-color" content="#000000" media="(prefers-color-scheme: dark)">
@@ -19,15 +19,14 @@
 
   <section class="tldr">
     <h2>Short version</h2>
-    <p>We don't collect, store, share, or sell any personal data about you.
-      TapThrough ships with <strong>zero analytics, zero tracking, and zero
-      third-party data SDKs</strong>. Your in-app purchases are handled by Apple,
-      not by us; we never see your name, email, payment information, or which
-      walkthroughs you read.</p>
-    <p>The rest of this policy explains that in more detail and covers the few
-      narrow technical interactions that do happen (App Store receipts, Apple's
-      crash diagnostics if you opt in to them at the system level, our static
-      website).</p>
+    <p><strong>You're not the product.</strong> Our revenue is your subscription —
+      not your data. We collect minimal, anonymous, aggregate information so we
+      can make TapThrough better, and that's it. We never sell your data, share
+      it with advertisers, or integrate ad-tech SDKs from Google, Meta, or any
+      ad network.</p>
+    <p>The rest of this policy covers exactly what we do collect (small),
+      what we never will (specific list), and how Apple's App Store handles
+      your purchases.</p>
   </section>
 
   <h2>1. Who we are</h2>
@@ -39,23 +38,68 @@
     information described in this policy. For the purposes of the California
     Consumer Privacy Act (CCPA), Jedrock LLC is the business.</p>
 
-  <h2>2. Information we do not collect</h2>
-  <p>The TapThrough iOS app does not contain, integrate with, or transmit data to:</p>
-  <ul>
-    <li>Google Analytics, Firebase, or any other Google-owned analytics service.</li>
-    <li>Mixpanel, Amplitude, Heap, PostHog, Segment, or any other third-party
-      product-analytics service.</li>
-    <li>Sentry, Crashlytics, Bugsnag, or any other third-party crash-reporting service.</li>
-    <li>Facebook SDK, AppsFlyer, Adjust, Branch, or any other attribution or
-      advertising-measurement service.</li>
-    <li>Any advertising network. We do not show ads. We do not collect or share
-      advertising identifiers (IDFA).</li>
-  </ul>
-  <p>We do not have a server that the app sends usage data to. We do not log
-    which walkthroughs you read, when you opened the app, how long you used it,
-    or what device you are on.</p>
+  <h2>2. What we collect</h2>
+  <p>TapThrough collects the minimum needed to operate the app, charge for it,
+    and make it better &mdash; nothing more. As of the &ldquo;Last updated&rdquo;
+    date above, that means:</p>
 
-  <h2>3. Information that stays on your device</h2>
+  <h3>2.1 Aggregate App Store analytics (Apple-provided, no individual IDs)</h3>
+  <p>Apple's App Store Connect gives us aggregate, anonymized metrics for any app
+    distributed through the App Store: install counts, country breakdowns,
+    revenue totals, crash counts, and impression / conversion rates on our App
+    Store listing. We cannot tie any of this back to individual users. We do not
+    have a way to ask Apple to stop providing these metrics.</p>
+
+  <h3>2.2 iOS system-level crash and analytics opt-in</h3>
+  <p>If you have turned on &ldquo;Share with App Developers&rdquo; in
+    Settings &rarr; Privacy &amp; Security &rarr; Analytics &amp; Improvements,
+    iOS may send Apple anonymized crash logs and aggregate usage metrics for
+    apps including TapThrough. Apple aggregates and anonymizes this data before
+    we see it. We never see crash reports tied to an individual user. You can
+    turn this off at any time in iOS Settings.</p>
+
+  <h3>2.3 StoreKit purchase receipts</h3>
+  <p>When you buy a subscription or pack, StoreKit delivers an anonymous receipt
+    to the app so we can unlock the content you paid for. The receipt does not
+    contain your name, email, payment information, billing address, or device
+    identifier &mdash; those stay with Apple.</p>
+
+  <h3>2.4 Privacy-respecting product analytics (planned, not yet shipped)</h3>
+  <p>We anticipate adding a <strong>privacy-respecting product-analytics service</strong>
+    in a future release &mdash; a service like Aptabase or TelemetryDeck that lets
+    us see anonymous, aggregate event counts (which walkthroughs are opened most,
+    where in the app people drop off) without cookies, without personal
+    identifiers, and without cross-app or cross-site tracking. When we ship this:</p>
+  <ul>
+    <li>We will update this policy to name the specific service, the specific
+      events we collect, and how to opt out.</li>
+    <li>We will require the service to operate under a written data-processing
+      agreement that prohibits resale, ad targeting, or re-identification.</li>
+    <li>We will continue not to integrate any tracking SDK from an ad network
+      (see §4 below).</li>
+  </ul>
+
+  <h2>3. What we never do (and never will)</h2>
+  <p>These commitments are durable, not aspirational. They define the business model.</p>
+  <ul>
+    <li>We do not sell your data to data brokers, advertisers, marketing
+      networks, or anyone else.</li>
+    <li>We do not share your data with advertising networks.</li>
+    <li>We do not integrate third-party ad-tech SDKs &mdash; specifically
+      including Google Analytics, Firebase Analytics, the Facebook / Meta SDK,
+      Mixpanel, AppsFlyer, Adjust, Branch, Singular, or any successor product
+      from those vendors.</li>
+    <li>We do not use Apple's Identifier for Advertisers (IDFA). We do not call
+      <code>ASIdentifierManager</code> for any purpose.</li>
+    <li>We do not show advertisements inside TapThrough.</li>
+    <li>We do not build a behavioral profile tying your activity to your
+      identity.</li>
+    <li>We do not use your in-app activity to train AI models.</li>
+    <li>We do not engage in cross-context behavioral advertising as defined
+      by the California Consumer Privacy Act (CCPA).</li>
+  </ul>
+
+  <h2>4. Information that stays on your device</h2>
   <p>The following lives on your iPhone only, in the app's local sandbox, and
     is never transmitted to us:</p>
   <ul>
@@ -65,33 +109,16 @@
   </ul>
   <p>If you delete the app, all of this is removed with it.</p>
 
-  <h2>4. Apple App Store and in-app purchases</h2>
+  <h2>5. Apple App Store &mdash; what Apple sees that we don't</h2>
   <p>When you buy a subscription or topic pack inside TapThrough, the purchase is
     processed by Apple through Apple's App Store and StoreKit framework. Apple
     handles your payment, stores your purchase history, and manages renewals and
     refunds under Apple's own
     <a href="https://www.apple.com/legal/internet-services/itunes/">privacy and terms</a>.</p>
-  <p>What Apple shares with us:</p>
-  <ul>
-    <li>An anonymous receipt confirming that a purchase succeeded, so the app
-      can unlock the content you paid for.</li>
-    <li>Aggregate, anonymous App Store Analytics &mdash; total downloads, total
-      revenue, country-level installs, crash counts &mdash; that we can see in
-      Apple's App Store Connect dashboard. We cannot tie any of this back to
-      individual users.</li>
-  </ul>
   <p>What Apple does <em>not</em> share with us: your Apple ID, your name, your
     email, your payment information, your billing address, your IP address, or
-    your device identifier.</p>
-
-  <h2>5. Apple system-level crash and analytics opt-in</h2>
-  <p>If you have turned on &ldquo;Share with App Developers&rdquo; in
-    Settings &rarr; Privacy &amp; Security &rarr; Analytics &amp; Improvements,
-    iOS may send Apple anonymized crash logs and aggregate usage metrics for
-    apps including TapThrough. Apple aggregates and anonymizes this data before
-    we see it in App Store Connect. We never see crash reports tied to an
-    individual user, and we cannot link them to any other information.</p>
-  <p>You can turn this off at any time in iOS Settings.</p>
+    your device identifier. We only ever receive the anonymous receipt described
+    in §2.3 and the aggregate analytics described in §2.1.</p>
 
   <h2>6. This website</h2>
   <p>This website (<a href="https://tapthrough.app">tapthrough.app</a>) is a set
@@ -119,10 +146,10 @@
     information (e.g., by emailing us), please contact us and we will delete it.</p>
 
   <h2>9. Your rights</h2>
-  <p>Because we do not collect personal data about you, most data-subject rights
-    under GDPR and CCPA &mdash; the right to access, delete, or port your data
-    &mdash; have nothing to act on. There is no profile of you on our servers to
-    show you, delete, or export.</p>
+  <p>Because the data we collect about you is anonymous and aggregate (§2), there
+    is no profile tied to your identity for us to show you, export, or delete.
+    The data-subject rights under GDPR and CCPA &mdash; access, deletion,
+    portability &mdash; have nothing to act on at the individual level.</p>
   <p>You still have the right to:</p>
   <ul>
     <li><strong>Contact us</strong> with privacy questions at

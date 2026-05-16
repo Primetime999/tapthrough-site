@@ -227,11 +227,11 @@ strong { font-weight: 600; color: inherit; }
 .section-head-center .section-eyebrow { display: inline-flex; }
 
 .section-sub {
-  font-size: clamp(17px, 1.4vw, 19px);
+  font-size: clamp(18px, 1.5vw, 20px);
   color: var(--c-ink-2);
   max-width: 52ch;
   margin: 18px 0 0;
-  line-height: 1.5;
+  line-height: 1.55;
 }
 
 
@@ -459,7 +459,7 @@ strong { font-weight: 600; color: inherit; }
 .demo-copy { max-width: 540px; }
 
 .demo-body {
-  font-size: 17px;
+  font-size: clamp(17px, 1.4vw, 19px);
   color: var(--c-ink-2);
   line-height: 1.6;
   margin: 0 0 24px;
@@ -473,7 +473,7 @@ strong { font-weight: 600; color: inherit; }
 }
 
 .demo-bullets li {
-  font-size: 15px;
+  font-size: 16px;
   color: var(--c-ink-2);
   padding-left: 22px;
   position: relative;
@@ -669,9 +669,9 @@ strong { font-weight: 600; color: inherit; }
 }
 
 .threat-body p {
-  font-size: 17px;
+  font-size: clamp(17px, 1.4vw, 19px);
   color: var(--c-ink-2);
-  line-height: 1.5;
+  line-height: 1.55;
   max-width: 56ch;
   margin: 0 0 12px;
 }
@@ -750,11 +750,90 @@ strong { font-weight: 600; color: inherit; }
 }
 
 .how-step p {
-  font-size: 16px;
+  font-size: clamp(16px, 1.3vw, 18px);
   color: var(--c-ink-2);
-  line-height: 1.5;
+  line-height: 1.55;
   max-width: 32ch;
   margin: 0 auto;
+}
+
+
+/* ──────────────────────────────────────────────────────────────────────
+   AUDIENCE — "Who it's for" vignettes (CANONICAL §1.5)
+   ────────────────────────────────────────────────────────────────────── */
+
+.audience-section {
+  padding: var(--pad-section) var(--pad-x);
+  background: var(--c-bg-2);
+  border-top: 1px solid var(--c-rule-2);
+}
+
+.audience-grid {
+  max-width: var(--content);
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 48px;
+}
+
+@media (min-width: 760px) {
+  .audience-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 56px 64px;
+  }
+}
+
+.audience-card {
+  display: flex;
+  flex-direction: column;
+  padding-top: 24px;
+  border-top: 2px solid var(--c-ink);
+}
+
+.audience-tag {
+  font-family: var(--f-mono);
+  font-size: 12px;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.10em;
+  color: var(--c-muted);
+  margin: 0 0 14px;
+}
+
+.audience-head {
+  font-size: clamp(24px, 2.6vw, 32px);
+  font-weight: 700;
+  letter-spacing: -0.018em;
+  line-height: 1.15;
+  color: var(--c-ink);
+  margin: 0 0 14px;
+  max-width: 22ch;
+}
+
+.audience-body {
+  font-size: clamp(16px, 1.3vw, 18px);
+  color: var(--c-ink-2);
+  line-height: 1.55;
+  margin: 0 0 18px;
+  max-width: 38ch;
+}
+
+.audience-link {
+  font-family: var(--f-mono);
+  font-size: 12px;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--c-ink);
+  border-bottom: 1px solid var(--c-rule);
+  padding-bottom: 3px;
+  align-self: flex-start;
+  margin-top: auto;
+  transition: color .15s ease, border-color .15s ease;
+}
+.audience-link:hover {
+  color: var(--a-red);
+  border-bottom-color: var(--a-red);
 }
 
 
@@ -872,6 +951,20 @@ strong { font-weight: 600; color: inherit; }
   z-index: 1;
 }
 
+.pack-promise {
+  font-size: 16px;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  line-height: 1.35;
+  color: var(--c-ink);
+  margin: 0 0 14px;
+  max-width: 26ch;
+  position: relative;
+  z-index: 1;
+}
+.pack-pro .pack-promise,
+.pack-feature .pack-promise { color: var(--b-white); }
+
 .pack-count {
   font-family: var(--f-mono);
   font-size: 12px;
@@ -882,7 +975,7 @@ strong { font-weight: 600; color: inherit; }
 }
 
 .pack-apps {
-  font-size: 14.5px;
+  font-size: 15.5px;
   color: var(--c-ink-2);
   line-height: 1.55;
   margin: 0 0 20px;
@@ -956,21 +1049,27 @@ strong { font-weight: 600; color: inherit; }
 }
 
 .privacy-headline {
-  font-size: clamp(72px, 12vw, 168px);
+  font-size: clamp(48px, 9vw, 120px);
   font-weight: 800;
-  line-height: 1.0;
-  letter-spacing: -0.04em;
+  line-height: 1.02;
+  letter-spacing: -0.038em;
   color: var(--b-white);
-  margin: 0 0 36px;
+  margin: 0 0 32px;
+  text-wrap: balance;
 }
 
 .privacy-body {
-  font-size: clamp(17px, 1.4vw, 19px);
+  font-size: clamp(19px, 1.8vw, 24px);
   color: var(--b-white-80);
-  line-height: 1.6;
-  max-width: 60ch;
+  line-height: 1.55;
+  max-width: 32ch;
   margin: 0 auto 32px;
 }
+
+@media (min-width: 720px) {
+  .privacy-body { max-width: 48ch; }
+}
+
 .privacy-body strong { color: var(--b-white); font-weight: 700; }
 
 .privacy-cta { margin: 0; }
@@ -1056,9 +1155,8 @@ strong { font-weight: 600; color: inherit; }
 }
 
 .price-tag {
-  position: absolute;
-  top: -12px;
-  left: 24px;
+  align-self: flex-start;
+  display: inline-block;
   background: var(--a-red);
   color: #fff;
   font-family: var(--f-sans);
@@ -1068,8 +1166,10 @@ strong { font-weight: 600; color: inherit; }
   letter-spacing: 0.10em;
   padding: 6px 12px;
   border-radius: 999px;
-  margin: 0;
+  margin: 0 0 18px;
   box-shadow: 0 4px 12px rgba(255, 59, 48, 0.40);
+  position: relative;
+  z-index: 1;
 }
 
 .price-name {
@@ -1115,11 +1215,11 @@ strong { font-weight: 600; color: inherit; }
   gap: 10px;
 }
 .price-includes li {
-  font-size: 15px;
+  font-size: 16px;
   color: var(--c-ink-2);
   padding-left: 22px;
   position: relative;
-  line-height: 1.45;
+  line-height: 1.5;
 }
 .price-includes li::before {
   content: "";
@@ -1146,7 +1246,7 @@ strong { font-weight: 600; color: inherit; }
 .pricing-disclosure {
   max-width: var(--content);
   margin: 24px auto 0;
-  font-size: 13px;
+  font-size: 14px;
   color: var(--c-muted);
   line-height: 1.6;
 }
@@ -1259,7 +1359,7 @@ strong { font-weight: 600; color: inherit; }
 }
 
 .footer-cols p {
-  font-size: 14px;
+  font-size: 15px;
   color: var(--b-white-80);
   margin: 0 0 6px;
 }
@@ -1363,9 +1463,9 @@ strong { font-weight: 600; color: inherit; }
 }
 
 .prose p, .prose li {
-  font-size: 17px;
+  font-size: clamp(17px, 1.4vw, 19px);
   color: var(--c-ink-2);
-  line-height: 1.6;
+  line-height: 1.65;
 }
 
 .prose ul, .prose ol { padding-left: 22px; margin: 0 0 20px; }

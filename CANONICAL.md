@@ -59,6 +59,79 @@ Do NOT use:
 - Trade name: TapThrough.
 - TapThrough is a product of Jedrock LLC and is **not affiliated with, endorsed by, sponsored by, or partnered with** Apple Inc. or any third-party app shown in our walkthroughs.
 
+### 1.5 Audiences and how to write to each one
+
+Per `.planning/VISION.md` §"Target users (initial wedge)", TapThrough has five distinct target audiences with one shared pain (hidden settings, outdated tutorials, confusing interfaces) but very different vocabularies, motivations, and lead hooks. Every marketing surface should be reviewed against this list to make sure it speaks to more than one.
+
+| # | Audience | Lead hook | Primary pack | Sample headline copy |
+|---|---|---|---|---|
+| 1 | **Older adults & less tech-savvy users** | Comfort + clarity. "You're not failing; iOS moved it." | Display & Accessibility, Battery & Storage | "If your iPhone feels harder than it should." |
+| 2 | **Parents managing kids' devices** | Safety + control. "Set it up right the first time." | Family Safety | "If you're setting up your kid's first phone." |
+| 3 | **Privacy-conscious adults** | Reveal + take-back. "Defaults betrayed you. Fix them." | Privacy | "If your apps know more about you than you do." (= current hero) |
+| 4 | **Switchers** (Android→iOS, major iOS upgrade) | Speed + relief. "Find anything Apple moved." | Free tier + onboarding walkthroughs | "If you just got a new iPhone." |
+| 5 | **General iPhone users** wanting time/money savings | Specific outcomes + ROI. "Cancel Prime in 30 seconds." | Time & Money Savers | "The fixes that pay for the app in the first week." |
+
+**Lead hook formats per audience** (from `content-strategy.md` §1a):
+- The **Reveal** (privacy-conscious) — cold-open with a threat, walkthrough fixes it, end card.
+- The **Race** (savers, switchers) — split-screen "fumbling vs. tap-tap-done," ends with the time gap.
+- The **Parent PSA** (parents, older adults) — direct-address parent voice: "If your kid has Snapchat, do this tonight."
+
+**Authoring rule for any marketing surface:**
+1. Identify the audience the surface is for (write it in a comment if it's not obvious).
+2. Use that audience's vocabulary, not the others'. ("Screen Time," "TikTok Family Pairing" for parents; "find anything," "Wi-Fi setup" for switchers; "broadcasting," "default settings" for privacy.)
+3. If the surface is the homepage or App Store description (broad audience): include language that speaks to at least 3 of the 5 above, not just one. The current homepage's "Who it's for" section is the canonical example.
+4. Never collapse all audiences into one vague tagline. ("Helps with iPhone settings" speaks to nobody.)
+
+---
+
+### 1.4a Privacy positioning (use this framing — not over-claims, not defensive lists)
+
+TapThrough's privacy story is **"you're not the product."** Stated once, calmly. Our customers are regular people, not security researchers — they want to know they can trust us, not read a hostage statement.
+
+**Voice rules for any privacy-adjacent copy:**
+- **Short.** Two or three sentences on a marketing surface. Long enough that the legal policy can be specific; short enough that the marketing site doesn't feel defensive.
+- **Calm.** Don't enumerate vendors we don't use. Don't list SDK names. Don't pre-emptively defend against accusations no one is making.
+- **No jargon.** No "IDFA," no "SDK," no "behavioral profile," no "data broker" on marketing surfaces. Plain language only.
+- **One idea per surface.** The homepage says one thing about privacy; the policy says the detail.
+
+**Marketing-surface examples (use this voice):**
+> Headline: "We don't sell your data."
+> Body: "Your subscription is how we get paid. You'll never see an ad, and the little we measure is anonymous — just enough to make the app better."
+
+**Headline rules:** lead with the clearest plain-English statement of the promise. "We don't sell your data" is what a 60-year-old grandparent understands on first read. Avoid headlines that require knowing the industry-insider phrase "you're not the product" — that's a tell that the writer is talking to a product team, not to a real person.
+
+**Wrong framing — DO NOT USE on marketing surfaces:**
+- "We collect zero data." (over-claim — App Store Connect gives us aggregate analytics by default)
+- "Zero analytics SDKs forever." (over-claim — privacy-respecting analytics like Aptabase / TelemetryDeck are likely future additions and there's no shame in that)
+- "We don't integrate tracking SDKs from Google, Meta, or any ad network." (defensive — names vendors no regular person is asking about)
+- "No IDFA." (jargon — readers don't know what this is)
+- Enumerated lists of specific things we don't do, on marketing surfaces. (Goes in the policy. Not the homepage.)
+
+**Privacy Policy ≠ marketing copy.** The full Privacy Policy (`tapthrough-site/privacy.html`) is the right place for specific vendor names, SDK lists, and enumerated commitments — that's the policy genre, and the audience reading it expects detail. The homepage, App Store description, social posts, and press lines stay in the calm-and-short voice above.
+
+**What we DO collect (current and anticipated):**
+- Aggregate, anonymous App Store Connect analytics that Apple gives us by default (install counts, country breakdowns, revenue, aggregate crash counts).
+- iOS system-level crash diagnostics if the user has opted in at the OS level.
+- StoreKit purchase receipts (anonymous, required to unlock paid content).
+- **Likely future**: a privacy-respecting product-analytics service (Aptabase, TelemetryDeck, or equivalent) for anonymous event counts — which walkthroughs are opened most, where users drop off, etc. No cookies. No personal IDs. No cross-app or cross-site tracking. To be disclosed in the privacy policy the moment it ships, including the specific vendor.
+
+**What we will NEVER do (these promises are durable and honest):**
+- Sell or share data with data brokers.
+- Share data with advertising networks.
+- Integrate third-party ad-tech SDKs (Google Analytics, Firebase, Facebook/Meta SDK, AppsFlyer, Adjust, Branch, Mixpanel for ads, etc.).
+- Use Apple's Identifier for Advertisers (IDFA).
+- Build a behavioral profile tying activities to your identity.
+- Show advertisements in the app.
+- Use your in-app data to train AI models without explicit, opt-in consent.
+
+**Reference sections that must use this framing:**
+- Homepage privacy callout (`tapthrough-site/index.html`)
+- Privacy Policy (`tapthrough-site/privacy.html`) — full §2 + §4
+- Terms of Service TL;DR (`tapthrough-site/terms.html` §"Short version")
+- Any App Store Connect "App Privacy" disclosures
+- Future App Store screenshots that lean on privacy positioning
+- Future press / launch copy
+
 ### 1.4 Trademark line (use verbatim wherever required)
 > &copy; 2026 Jedrock LLC. TapThrough is a product of Jedrock LLC, not
 > affiliated with or endorsed by Apple Inc. or any third-party app shown in
