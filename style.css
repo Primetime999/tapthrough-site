@@ -144,8 +144,8 @@ img { display: block; max-width: 100%; height: auto; }
 
 .nav-links { display: flex; gap: 28px; }
 .nav-links a {
-  font-size: 14px;
-  font-weight: 400;
+  font-size: 15px;
+  font-weight: 500;
   color: var(--c-ink-2);
   text-decoration: none;
   transition: color .15s ease;
@@ -170,7 +170,7 @@ strong { font-weight: 600; color: inherit; }
 
 .section-eyebrow {
   font-family: var(--f-mono);
-  font-size: 12px;
+  font-size: 13px;
   font-weight: 500;
   color: var(--c-muted);
   text-transform: uppercase;
@@ -185,7 +185,7 @@ strong { font-weight: 600; color: inherit; }
 
 .eyebrow {
   font-family: var(--f-mono);
-  font-size: 12px;
+  font-size: 13px;
   font-weight: 500;
   color: var(--b-white-55);
   text-transform: uppercase;
@@ -269,7 +269,7 @@ strong { font-weight: 600; color: inherit; }
   text-transform: none;
   letter-spacing: normal;
   font-family: var(--f-sans);
-  font-size: 13px;
+  font-size: 14px;
   font-weight: 600;
 }
 .circled-inline .circle-svg path { stroke-width: 2.2; }
@@ -399,7 +399,7 @@ strong { font-weight: 600; color: inherit; }
 .ticker-label {
   text-transform: uppercase;
   letter-spacing: 0.12em;
-  font-size: 11px;
+  font-size: 12px;
   color: var(--b-white-35);
 }
 
@@ -593,7 +593,7 @@ strong { font-weight: 600; color: inherit; }
 
 .phone-step-num {
   font-family: var(--f-mono);
-  font-size: 10px;
+  font-size: 11px;
   text-transform: uppercase;
   letter-spacing: 0.14em;
   color: var(--b-white-35);
@@ -606,7 +606,7 @@ strong { font-weight: 600; color: inherit; }
 
 .phone-caption {
   font-family: var(--f-mono);
-  font-size: 11px;
+  font-size: 12px;
   color: var(--c-muted);
   text-transform: uppercase;
   letter-spacing: 0.10em;
@@ -651,7 +651,7 @@ strong { font-weight: 600; color: inherit; }
 
 .threat-num {
   font-family: var(--f-mono);
-  font-size: 13px;
+  font-size: 14px;
   font-weight: 500;
   color: var(--c-muted);
   letter-spacing: 0.06em;
@@ -691,14 +691,14 @@ strong { font-weight: 600; color: inherit; }
   padding: 4px 10px;
   border-radius: 999px;
   font-family: var(--f-sans);
-  font-size: 11px;
+  font-size: 12px;
   font-weight: 600;
   letter-spacing: 0.04em;
 }
 
 .dur {
   font-family: var(--f-mono);
-  font-size: 12px;
+  font-size: 13px;
   color: var(--c-muted);
   letter-spacing: 0.04em;
 }
@@ -792,7 +792,7 @@ strong { font-weight: 600; color: inherit; }
 
 .audience-tag {
   font-family: var(--f-mono);
-  font-size: 12px;
+  font-size: 13px;
   font-weight: 500;
   text-transform: uppercase;
   letter-spacing: 0.10em;
@@ -820,7 +820,7 @@ strong { font-weight: 600; color: inherit; }
 
 .audience-link {
   font-family: var(--f-mono);
-  font-size: 12px;
+  font-size: 13px;
   font-weight: 500;
   text-transform: uppercase;
   letter-spacing: 0.12em;
@@ -923,7 +923,7 @@ strong { font-weight: 600; color: inherit; }
 
 .pack-tag {
   font-family: var(--f-mono);
-  font-size: 11px;
+  font-size: 12px;
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 0.10em;
@@ -967,7 +967,7 @@ strong { font-weight: 600; color: inherit; }
 
 .pack-count {
   font-family: var(--f-mono);
-  font-size: 12px;
+  font-size: 13px;
   text-transform: uppercase;
   letter-spacing: 0.08em;
   color: var(--c-muted);
@@ -975,7 +975,7 @@ strong { font-weight: 600; color: inherit; }
 }
 
 .pack-apps {
-  font-size: 15.5px;
+  font-size: 16px;
   color: var(--c-ink-2);
   line-height: 1.55;
   margin: 0 0 20px;
@@ -1160,7 +1160,7 @@ strong { font-weight: 600; color: inherit; }
   background: var(--a-red);
   color: #fff;
   font-family: var(--f-sans);
-  font-size: 11px;
+  font-size: 12px;
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 0.10em;
@@ -1173,7 +1173,7 @@ strong { font-weight: 600; color: inherit; }
 }
 
 .price-name {
-  font-size: 13px;
+  font-size: 14px;
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 0.08em;
@@ -1201,7 +1201,7 @@ strong { font-weight: 600; color: inherit; }
 
 .price-equiv {
   font-family: var(--f-mono);
-  font-size: 12px;
+  font-size: 13px;
   color: var(--c-muted);
   letter-spacing: 0.02em;
   margin: 0 0 24px;
@@ -1236,7 +1236,7 @@ strong { font-weight: 600; color: inherit; }
 
 .price-fine {
   margin-top: auto;
-  font-size: 13px;
+  font-size: 14px;
   color: var(--c-muted);
   border-top: 1px solid var(--c-rule-2);
   padding-top: 14px;
@@ -1290,7 +1290,7 @@ strong { font-weight: 600; color: inherit; }
 
 .support-meta {
   font-family: var(--f-mono);
-  font-size: 12px;
+  font-size: 13px;
   color: var(--c-muted);
   text-transform: uppercase;
   letter-spacing: 0.08em;
@@ -1350,7 +1350,7 @@ strong { font-weight: 600; color: inherit; }
 
 .footer-label {
   font-family: var(--f-mono);
-  font-size: 11px;
+  font-size: 12px;
   font-weight: 500;
   text-transform: uppercase;
   letter-spacing: 0.10em;
@@ -1373,14 +1373,14 @@ strong { font-weight: 600; color: inherit; }
 
 .footer-address {
   font-family: var(--f-mono);
-  font-size: 12px;
+  font-size: 13px;
   color: var(--b-white-35);
   line-height: 1.6;
   margin-top: 10px;
 }
 
 .footer-fine {
-  font-size: 12px;
+  font-size: 13px;
   color: var(--b-white-35);
   line-height: 1.6;
   max-width: 76ch;
@@ -1418,7 +1418,7 @@ strong { font-weight: 600; color: inherit; }
 
 .prose .back {
   font-family: var(--f-mono);
-  font-size: 12px;
+  font-size: 13px;
   text-transform: uppercase;
   letter-spacing: 0.12em;
   color: var(--c-muted);
@@ -1438,7 +1438,7 @@ strong { font-weight: 600; color: inherit; }
 
 .prose .meta {
   font-family: var(--f-mono);
-  font-size: 12px;
+  font-size: 13px;
   text-transform: uppercase;
   letter-spacing: 0.10em;
   color: var(--c-muted);
@@ -1480,7 +1480,7 @@ strong { font-weight: 600; color: inherit; }
 }
 .prose .tldr h2 {
   font-family: var(--f-mono);
-  font-size: 11px;
+  font-size: 12px;
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 0.12em;
@@ -1495,7 +1495,7 @@ strong { font-weight: 600; color: inherit; }
   padding-top: 24px;
   border-top: 1px solid var(--c-rule);
   font-family: var(--f-mono);
-  font-size: 12px;
+  font-size: 13px;
   text-transform: uppercase;
   letter-spacing: 0.10em;
   color: var(--c-muted);
@@ -1507,5 +1507,5 @@ strong { font-weight: 600; color: inherit; }
   text-transform: none;
   letter-spacing: 0;
   font-family: var(--f-sans);
-  font-size: 12px;
+  font-size: 13px;
 }

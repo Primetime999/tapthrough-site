@@ -216,6 +216,24 @@ Line-height: 1.05 for display, 1.15 for title-1/2, 1.5 for body, 1.4 for callout
 SF Pro italics exist but read as "system label." Emphasize with **weight** or
 with **color** (the brand red), never with `<em>` styling on body copy.
 
+### 3.5 Minimum text sizes (the floor)
+
+Anything readable on a marketing surface respects this floor. Updated 2026-05-15 after homepage typography audit.
+
+| Text role | Floor | Examples |
+|---|---|---|
+| **Body copy** (paragraphs people actually read) | **16px** | `.privacy-body`, `.threat-body p`, `.demo-body`, `.audience-body`, `.pack-promise`, `.pack-apps`, `.price-includes li`, `.how-step p` |
+| **Lede / oversized body** (one-line hooks) | **18px** | `.lede`, `.section-sub` |
+| **Mid-tier meta / nav** (links, descriptions) | **15px** | `.nav-links a`, `.footer-cols p` |
+| **Eyebrows / mono caps labels** | **13px** | `.section-eyebrow`, `.eyebrow`, `.audience-tag`, `.pack-count`, `.price-name`, `.price-equiv` |
+| **Pill / chip labels** | **12px** | `.app-tag`, `.pack-tag`, `.footer-label`, `.ticker-label`, `.phone-caption` |
+| **Decorative chrome only** (inside a stylized component like the phone mockup) | **11px** | `.phone-step-num` |
+| **No text under 11px anywhere.** | — | — |
+
+**Authoring rule:** never declare `font-size: 10px` or below. Never declare a body-text rule under 16px. Eyebrows and labels start at 13px and only drop to 12 when they're pill/chip styling. The single 11px exception (`.phone-step-num`) is decorative chrome inside the phone-mockup component and is the only `font-size: 11px` allowed in the codebase — any future 11px addition needs a comment explaining why it can't be 12.
+
+**Rationale:** users include older adults (per CANONICAL §1.5 Audience 1). Anything under 13px on a mobile viewport is uncomfortable to read for that audience and reads as "we forgot the responsive pass" to everyone else.
+
 ---
 
 ## 4. Color
