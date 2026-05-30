@@ -9,7 +9,7 @@
 > this document is correct and the other surface is stale. Update the stale
 > surface in the same commit you find it.
 
-_Last updated: 2026-05-15. Owner: Jeffrey Davis (Jedrock LLC)._
+_Last updated: 2026-05-30. Owner: Jeffrey Davis (Jedrock LLC)._
 
 ---
 
@@ -521,3 +521,106 @@ Any new `View` added to the app from this point forward MUST:
 - Reference product IDs via `SubscriptionConstants.ProductID`, not inline strings.
 
 Adding a new `Color(hex: ...)` literal to a shipping view requires a comment explaining why it cannot use a `Brand.*` token. If you can't write that comment, the right answer is to add a new token to `Brand.swift`.
+
+---
+
+## 12. App Store creative — scoped exception
+
+**Status:** Active 2026-05-30.
+**Scope:** App Store iOS screenshots (`marketing/appstore/store-screenshots/iphone-*`) and IAP promotional tiles (`marketing/appstore/iap-promotional-images/*.png`) in the `TapThrough-Project` repo.
+**Out of scope:** every other surface (the iOS app UI, the marketing website, App Store text fields, social posts, press materials, the master App Store app icon, printed material) — those continue to follow §1–§11 verbatim.
+
+### 12.0 Why an exception
+
+App Store screenshots are the only surface where TapThrough competes in a portrait, thumbnail-first feed against apps using bold display typography, mesh gradients, and high-contrast atmospheric backgrounds. The canonical SF Pro / `--b-dark` gradient that defines the rest of our brand reads as "system label" in that carousel and underperforms on install conversion (best-practice research, 2026-05-29). This section scopes a more dramatic creative treatment to two App Store surfaces and **only** those, keeping every other brand surface faithful to §1–§11.
+
+### 12.1 Typography exception
+- **Display headlines:** **Bricolage Grotesque** (700–800), tracking `-0.02em`, line-height `~0.98`.
+- **Body / sub-copy:** **Hanken Grotesk** (500–600).
+- **Eyebrows + wordmark "TAPTHROUGH":** Hanken Grotesk uppercase with wide letter-spacing.
+- These fonts are loaded from Google Fonts **at render time only** — never embedded in the iOS app target, never added to the website font stack.
+
+§3.1's system-stack rule still governs the iOS app and the website. The §3.1 prohibition on web-served fonts does not apply within §12 scope.
+
+### 12.2 Color exception — the mesh atmosphere
+
+The App Store creative uses a layered atmospheric background that is distinct from the §4.2 hero gradient and used **only** on App Store creative:
+
+```css
+background:
+  radial-gradient(120vw 80vh at 78% -8%, rgba(124,58,237,.55), transparent 60%),
+  radial-gradient(110vw 70vh at 10% 108%, rgba(34,167,255,.45), transparent 58%),
+  radial-gradient( 90vw 60vh at 95% 95%, rgba(255,59,48,.16), transparent 55%),
+  linear-gradient(160deg, #0c0a1c 0%, #0a0a12 55%, #08080f 100%);
+```
+
+Plus an SVG-noise grain at ~6% opacity (`mix-blend-mode: overlay`) and a top-fading dot grid at ~5%. In-app and on-web, the §4.2 `--b-dark-1 / -2 / -3` gradient is still mandatory.
+
+### 12.3 Red discipline exception
+
+§4.6's "red appears in only three places, never as primary chrome" rule does **not** apply on App Store creative. The app's signature red tap-ring (`#FF3B30`) is the marketing focal element and may be used as:
+- the hero ring motif (large, glowing),
+- the checkmark icons on value rows,
+- the eyebrow color on neutral (non-pack) slides,
+- the wordmark "T" tint.
+
+§4.6 remains in force on every other surface.
+
+### 12.4 Pack accent palette — screen-glow variants
+
+On dark mesh backgrounds the canonical pack-gradient endpoints muddy visually. The App Store creative uses brighter "screen-glow" variants in the pack chip, ring border, and accent glow. They are explicit accent colors, not gradient endpoints, and apply **only** within §12 scope. App and web continue to use the canonical pack gradients (`BrandTokens.Palette.Pack.*` in `TapThrough/Design/BrandTokens.swift`).
+
+| Pack | Canonical anchor | App Store creative accent |
+|---|---|---|
+| Privacy | `#7C3AED` (`Pack.privacyStart`) | `#C084FC` (light purple) |
+| Kid's iPhone (Family) | `#FBBF24` (`Pack.kidsiPhoneEnd`) | `#FBBF24` (amber) |
+| Time & Money Savers | `#3B82F6` (`Pack.saversStart`) | `#38BDF8` (sky) |
+| Battery & Storage | `#10B981` (`Pack.batteryEnd`) | `#34D399` (emerald) |
+| Display & Accessibility | `#6D28D9` (§4.5 display end) | `#818CF8` (indigo) |
+
+> Pre-existing inconsistency between §4.5 and `BrandTokens.Palette.Pack.*` (different pack gradient endpoints) is acknowledged here but **not resolved by §12**. Resolving it is its own canonical bump.
+
+### 12.5 Layout exception
+
+- Device mockups are realistic CSS frames (titanium bezel, dynamic island, rounded screen) with a slight tilt (`±4deg`) and a soft drop shadow + a tinted purple glow.
+- The App Store hero may center the red tap-ring instead of the master app icon. **§4.7's "icon prominent in hero" requirement does not apply within §12 scope** — the App Store screenshot itself is that surface's brand-recognition vehicle, and Apple already renders the master icon adjacent to it on the product page.
+
+### 12.6 What still applies on App Store creative
+
+§12 is an exception scoped to typography, mesh background, red usage, pack accents, and the icon-in-hero rule. Everything else in §1–§11 continues to apply, in particular:
+
+- **§1.5 audiences.** Every pack slide must speak to the right audience's vocabulary. Privacy → audience 3; Kid's iPhone → audience 2; Display & Accessibility → audience 1; Savers → audience 5; Battery → audiences 1+5.
+- **§2 voice rules.** Pack copy leads with **specific named features** ("Hide WhatsApp Last Seen", "Cancel Amazon Prime", "Make Venmo private"), not generic adjectives. Brand names are good — they create instant recognition. §2.2's "Threat + Speed + Proof" is encouraged; the sub-copy is the natural place for the "in under a minute" speed line.
+- **§6 pricing.** The locked $6.99 pack chip is correct. Pro Monthly + Pro Annual prices do not appear in marketing screenshots (they go stale).
+- **§10 change protocol.** A change to typography, palette, or any §12 token is a canonical bump.
+
+### 12.7 Asset locations
+
+| What | Where |
+|---|---|
+| Store screenshot design source | `TapThrough-Project/marketing/appstore/store-screenshots/_build/shots.html` |
+| Store screenshots — rendered (6.9") | `…/iphone-6.9-1320x2868/` |
+| Store screenshots — rendered (6.7") | `…/iphone-6.7-1290x2796/` |
+| Raw device captures (sources) | `…/store-screenshots/_raw/` |
+| IAP promotional tile design source | `TapThrough-Project/marketing/appstore/iap-promotional-images/_build/tiles.html` |
+| IAP promotional tiles (1024×1024) | `TapThrough-Project/marketing/appstore/iap-promotional-images/` |
+| IAP review screenshots (paywall captures) | `TapThrough-Project/marketing/appstore/iap-review-images/` |
+
+### 12.8 Out of scope (do not import this treatment)
+
+- iOS app UI — continues SF Pro + §4.2 gradient.
+- Marketing website (`tapthrough-site/*`) — system font stack and §4.2 gradient remain mandatory.
+- App Store text fields (title, subtitle, description, keywords) — §2 voice rules apply verbatim.
+- Press kit, social posts, blog posts — system font stack and §2 voice.
+- The 1024×1024 master App Store app icon (`AppIcon-1024.png`) — that is the longest-lived brand artifact per §4.7 and is unchanged.
+
+### 12.9 Render recipe
+
+The two HTML sources render through a headless browser:
+
+1. Serve the `marketing/appstore/` folder over HTTP (any local server).
+2. For shots: set viewport to the target size (`1320×2868` for 6.9", `1290×2796` for 6.7"). For tiles: set viewport to `1024×1024`.
+3. Navigate to the HTML, scroll each slide's `id` into view (`document.getElementById(slug).scrollIntoView()`), screenshot the viewport.
+4. Flatten to RGB (no alpha) via PIL and save into the matching size-named subfolder.
+
+Bricolage Grotesque + Hanken Grotesk are loaded from Google Fonts at render time; the renderer must have network access. Neither font is embedded in any other surface.
